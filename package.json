@@ -1,0 +1,51 @@
+{
+  "name": "@sovereign-axiom/core",
+  "version": "1.0.0",
+  "description": "Sovereign Axiom Front-End Architecture - Deterministic, Decentralized, Blockchain-Optimized",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "demo": "ts-node examples/demo.ts",
+    "verify": "ts-node examples/full-verification.ts",
+    "verify:ultra-hardened": "ts-node examples/ultra-hardened-verification.ts",
+    "benchmark": "ts-node examples/ultra-hardened-stress-test.ts",
+    "verify:all": "npm run verify:ultra-hardened && npm run benchmark",
+    "lint": "eslint src/**/*.ts",
+    "format": "prettier --write src/**/*.ts",
+    "clean": "rm -rf dist output"
+  },
+  "keywords": [
+    "sovereign",
+    "axiom",
+    "decentralized",
+    "blockchain",
+    "deterministic",
+    "fixed-point",
+    "WAD-18",
+    "p2p",
+    "homomorphic-encryption",
+    "digital-twins"
+  ],
+  "author": "Sovereign Axiom Team",
+  "license": "MIT",
+  "dependencies": {
+    "crypto": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.0.0",
+    "jest": "^29.0.0",
+    "@types/jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "prettier": "^2.8.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
